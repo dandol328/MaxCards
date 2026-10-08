@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>MaxCards</RootNamespace>
+    <AssemblyName>MaxCards</AssemblyName>
+    <!-- Path to the ROUNDS install folder (override with -p:RoundsDir=...) -->
+    <RoundsDir Condition="'$(RoundsDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\ROUNDS</RoundsDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp"><HintPath>$(RoundsDir)\Rounds_Data\Managed\Assembly-CSharp.dll</HintPath></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(RoundsDir)\Rounds_Data\Managed\UnityEngine.dll</HintPath></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(RoundsDir)\Rounds_Data\Managed\UnityEngine.CoreModule.dll</HintPath></Reference>
+    <Reference Include="BepInEx"><HintPath>$(RoundsDir)\BepInEx\core\BepInEx.dll</HintPath></Reference>
+    <Reference Include="0Harmony"><HintPath>$(RoundsDir)\BepInEx\core\0Harmony.dll</HintPath></Reference>
+    <Reference Include="UnboundLib"><HintPath>$(RoundsDir)\BepInEx\plugins\UnboundLib.dll</HintPath></Reference>
+    <Reference Include="ModdingUtils"><HintPath>$(RoundsDir)\BepInEx\plugins\ModdingUtils.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>
